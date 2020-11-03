@@ -1,0 +1,99 @@
+.about {
+  margin-top: 80px;
+}
+
+.about p {
+  font-family: $font-text;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+}
+
+.container--padding {
+  padding-left: 180px;
+  padding-right: 33px;
+  background: url("../img/2005-desktop@1x.png") -15px no-repeat;
+}
+
+.about__title {
+  font-family: $font-head;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: #666666;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.about__button {
+  display: block;
+  cursor: pointer;
+  font-family: $font-head;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $main-color;
+  width: 155px;
+  padding: 13.5px 0;
+  border: 1px solid $main-color;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.about__dots {
+  visibility: hidden;
+}
+
+@media (max-width: $tablet-width) {
+  .about {
+    margin-top: 29px;
+  }
+
+  .container--padding {
+    padding-left: 210px;
+    background: url("../img/2005-tablet@1x.png") left 0 no-repeat;
+  }
+
+  .about__title {
+    font-size: 32px;
+    line-height: 45px;
+    padding-top: 20px;
+  }
+
+  .about__button {
+    width: 180px;
+  }
+
+  .about__dots {
+    visibility: visible;
+  }
+
+  .about__hide {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about {
+    margin-top: 30px;
+  }
+
+  .about p {
+    margin-bottom: 30px;
+  }
+
+  .container--padding {
+    background: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .about__title {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
