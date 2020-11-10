@@ -6,6 +6,7 @@
   max-width: 1212px;
   padding: 0 15px;
   margin: 0 auto;
+  z-index: 9;
 }
 
 .advantages__items {
@@ -28,6 +29,7 @@
   cursor: pointer;
   box-sizing: border-box;
   max-width: 570px;
+  background-color: #ffffff;
 
   &:hover {
     background-color: $main-color;
