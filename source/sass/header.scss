@@ -4,14 +4,12 @@ h1 {
 
 .header {
   min-height: 878px;
-  background-color: #1b2d37;
-  background: url("../img/bg-desktop@1x.png") center no-repeat, #1b2d37;
-  background-size: cover;
-  overflow-x: hidden;
+  background: url("../img/circuit-desktop@1x.png") calc(50% + 440px) 258px no-repeat, url("../img/triangles-top.svg") calc(50% + 9px) no-repeat, url("../img/bg-desktop@1x.png") center no-repeat, #1b2d37;
+  overflow: hidden;
 }
 
 .header__container {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -28,6 +26,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .header__logo-text {
   font-family: $font-head;
   font-weight: bold;
@@ -35,6 +34,7 @@ h1 {
   line-height: 29px;
   color: #ffffff;
   margin-left: 16px;
+  margin-top: 6px;
 }
 
 .header__logo-text p {
@@ -46,10 +46,11 @@ h1 {
   color: #788891;
   margin: 0;
 }
+
 .header__contacts {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 47.5%;
   font-family: $font-text;
   font-weight: normal;
   font-size: 16px;
@@ -61,24 +62,24 @@ h1 {
   justify-content: space-between;
   align-items: center;
   flex-basis: 135px;
-  margin-right: 15px;
+  margin-right: 55px;
 }
 
 .header__phone {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 15px;
-  width: 218px;
+  width: 35%;
+  margin-right: 15px;
 }
 
 .header__email a {
   padding-left: 20px;
 }
 
-.header__phone a {
-  width: 200px;
+.header__phone-text {
   padding-left: 16px;
+  width: 196px;
 }
 
 .header__contacts a {
@@ -98,31 +99,19 @@ h1 {
   border: 1px solid #ffffff;
   border-radius: 5px;
   height: 45px;
-  flex-basis: 180px;
+  width: 182px;
   cursor: pointer;
 }
 
 .header__content {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 180px;
+  margin-top: 197px;
+  margin-left: -3px;
 }
 
 .header__about {
   position: relative;
   color: #ffffff;
-  width: 50%;
-
-  &::after {
-    position: absolute;
-    content: "";
-    background: url("../img/triangles-top.svg") center no-repeat;
-    width: 1405px;
-    height: 715px;
-    left: calc(100% - 80vh);
-    top: -173px;
-    z-index: 2;
-  }
+  width: 55%;
 }
 
 .header__about h2 {
@@ -132,11 +121,7 @@ h1 {
   line-height: 94px;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  margin-bottom: 31px;
-
-  @media (max-width: 1200px) {
-    font-size: 60px;
-  }
+  margin-bottom: 27px;
 }
 
 .header__about p {
@@ -146,7 +131,7 @@ h1 {
   font-weight: normal;
   font-size: 22px;
   line-height: 34px;
-  margin-bottom: 37px;
+  margin-bottom: 44px;
 
   &::before {
     position: absolute;
@@ -167,7 +152,7 @@ h1 {
   line-height: 19px;
   text-align: center;
   margin-left: 98px;
-  padding: 15px 0px;
+  padding: 18px 0;
   background-color: $main-color;
   width: 407px;
   border-radius: 5px;
@@ -179,36 +164,174 @@ h1 {
 
 .header__content img {
   z-index: 9;
+  margin-top: 6px;
+}
+
+.header__content-first {
+  display: block;
+}
+
+.header__content-second {
+  display: none;
 }
 
 @media (max-width: $tablet-width) {
   .header {
     min-height: 686px;
-    background: url("../img/bg-tablet@1x.png") center no-repeat, #1b2d37;
+    background: url("../img/circuit-tablet@1x.png") calc(50% + 357px) 114px no-repeat, url("../img/bg-tablet@1x.png") center no-repeat, #1b2d37;
+    background-size: 465px, cover;
   }
-  .header__container {
-  }
-  .header__top {
-  }
-  .header__logo {
-  }
-  .header__logo-text {
-  }
-  .header__contacts {
-  }
-  .header__email {
 
-  }
-  .header__icon-mail {
-  }
-  .header__phone {
-  }
   .header__icon-phone {
+    width: 24px;
+    height: 24px;
   }
+
+  .header__icon-mail {
+    width: 25px;
+    height: 19px;
+  }
+
+  .header__email-text {
+    display: none;
+  }
+
+  .header__phone-text {
+    display: none;
+  }
+
+  .header__phone a {
+    width: auto;
+    padding: 0;
+  }
+
+  .header__container {
+    width: auto;
+    padding: 0 25px;
+  }
+
+  .header__top {
+    min-height: 90px;
+  }
+
+  .header__contacts {
+    width: 100px;
+  }
+
+  .header__email {
+    width: 26px;
+    flex-basis: 26px;
+  }
+
+  .header__phone {
+    width: 26px;
+    margin: 0;
+  }
+
   .header__button {
+    display: none;
   }
+
+  .header__content img {
+    width: 465px;
+    height: 340px;
+  }
+
   .header__content {
+    margin-top: 98px;
   }
+
+  .header__about h2 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
   .header__about {
+    margin-left: 66px;
+  }
+
+  .header__about p {
+    font-size: 18px;
+    line-height: 28px;
+    width: 360px;
+    margin-left: 50px;
+    margin-top: 29px;
+
+    &::before {
+      width: 30px;
+      left: -45px;
+    }
+  }
+
+  .header__about a {
+    width: 379px;
+    margin-top: 55px;
+    margin-left: 51px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    min-height: 647px;
+    background: url("../img/circuit-mobile@1x.png") 23px 90px no-repeat, url("../img/bg-mobile@1x.png") center no-repeat, #1b2d37;
+    background-size: 301px, cover;
+  }
+
+  .header__container {
+    padding: 0 15px;
+  }
+
+  .header__top {
+    min-height: 71px;
+  }
+
+  .header__logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header__logo-text {
+    display: none;
+  }
+
+  .header__email {
+    margin-right: 0;
+  }
+
+  .header__content {
+    margin-top: 215px;
+    margin-left: 0;
+  }
+
+  .header__about h2 {
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .header__about {
+    margin-left: 0;
+    width: auto;
+  }
+
+  .header__about p {
+    width: auto;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 27px;
+    margin-bottom: 0;
+  }
+
+  .header__about a {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .header__content-first {
+    display: none;
+  }
+
+  .header__content-second {
+    display: block;
   }
 }

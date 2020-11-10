@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,11 +8,14 @@
   <meta name="description" content="Компания Smart Device">
   <title>Smart Device Акселератор</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="header">
     <div class="header__container">
       <h1>Компания Smart Device</h1>
@@ -25,16 +29,20 @@
         </div>
         <div class="header__contacts">
           <div class="header__email">
-            <svg class="header__icon-mail" width="19" height="14">
-              <use xlink:href="img/sprite.svg#icon-mail"></use>
-            </svg>
-            <a href="mailto:info@sd.ru">info@sd.ru</a>
+            <a href="mailto:info@sd.ru">
+              <svg class="header__icon-mail" width="19" height="14">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+            </a>
+            <a class="header__email-text" href="mailto:info@sd.ru">info@sd.ru</a>
           </div>
           <div class="header__phone">
-            <svg class="header__icon-phone" width="18" height="18">
-              <use xlink:href="img/sprite.svg#icon-phone"></use>
-            </svg>
-            <a href="tel:+74950005252">+7 (495) 000 52 52</a>
+            <a href="tel:+74950005252">
+              <svg class="header__icon-phone" width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+            </a>
+            <a class="header__phone-text" href="tel:+74950005252">+7 (495) 000 52 52</a>
           </div>
           <button class="header__button">Заказать звонок</button>
         </div>
@@ -43,9 +51,9 @@
         <div class="header__about">
           <h2>Печатные платы</h2>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a href="#">Получить бесплатную консультацию</a>
+          <a href="#"><span class="header__content-first">Получить бесплатную консультацию</span><span
+              class="header__content-second">Бесплатная консультация</span></a>
         </div>
-        <img src="img/circuit-desktop@1x.png" width="705" height="505" alt="Изображение платы">
       </div>
     </div>
   </header>
@@ -93,7 +101,7 @@
       </div>
     </section>
     <article class="about">
-      <div class="container container--padding">
+      <div class="container container-padding">
         <h2 class="about__title">О компании</h2>
         <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
           года. Выполняем срочные заказы и пилотные образцы до 10 дней.
@@ -110,8 +118,9 @@
       <div class="container container__margin">
         <h2 class="services__title">Service Device предлагает следующие товары и услуги</h2>
         <ul class="services__list">
-          <a href="#">
-            <li class="services__item">
+          <li class="services__item">
+            <a href="#">
+              <h3 class="services__item-title">Производство печатных плат</h3>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/service-image-1-mobile@1x.webp 1x, img/service-image-1-mobile@2x.webp 2x">
@@ -130,11 +139,11 @@
                   srcset="img/service-image-1-desktop@1x.jpg 1x, img/service-image-1-desktop@2x.jpg 2x" width="370"
                   height="620" alt="Изображение платы">
               </picture>
-            </li>
-            <h3 class="service__item-title">Производство печатных плат</h3>
-          </a>
-          <a href="#">
-            <li class="services__item">
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="#">
+              <h3 class="services__item-title">Монтаж печатных плат</h3>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/service-image-2-mobile@1x.webp 1x, img/service-image-2-mobile@2x.webp 2x">
@@ -153,11 +162,11 @@
                   srcset="img/service-image-2-desktop@1x.jpg 1x, img/service-image-2-desktop@2x.jpg 2x" width="370"
                   height="620" alt="Изображение платы">
               </picture>
-            </li>
-            <h3 class="service__item-title">Монтаж печатных плат</h3>
-          </a>
-          <a href="#">
-            <li class="services__item">
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="#">
+              <h3 class="services__item-title">Комплектующие для светотехники</h3>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/service-image-3-mobile@1x.webp 1x, img/service-image-3-mobile@2x.webp 2x">
@@ -176,20 +185,13 @@
                   srcset="img/service-image-3-desktop@1x.jpg 1x, img/service-image-3-desktop@2x.jpg 2x" width="370"
                   height="620" alt="Изображение комплектующих">
               </picture>
-            </li>
-            <h3 class="service__item-title">Комплектующие для светотехники</h3>
-          </a>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
     <section class="askform">
       <div class="askform__container">
-        <picture>
-          <source type="image/webp" srcset="img/airplane@1x.webp 1x, img/airplane@2x.webp 2x">
-          <!-- 1x: 511px; 2x: 1022px -->
-          <img src="img/airplane@1x.png" srcset="img/airplane@1x.png 1x, img/airplane@2x.png 2x"
-            width="511" height="268" alt="Бумажный самолет">
-        </picture>
         <form action="" method="POST">
           <h2>Остались вопросы? Задайте их нам!</h2>
           <h3>Мы проконсультируем Вас бесплатно</h3>
@@ -210,51 +212,97 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="container">
-      <div class="footer__logo">
-        <img src="img/logo-desktop.svg" alt="Логотип компании">
-        <div class="footer__logo-text">
-          Service Device
-          <p>умные технологии</p>
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <div class="footer__logo-img">
+            <img src="img/logo.svg" width="52" height="52" alt="Логотип компании">
+          </div>
+          <div class="footer__logo-text">
+            Service Device
+            <p>умные технологии</p>
+          </div>
+          <ul class="footer__socials">
+            <li class="footer__socials-item">
+              <a href="#">
+                <svg class="footer__socials-icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="#">
+                <svg class="footer__socials-icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#icon-klass"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-item">
+              <a href="#">
+                <svg class="footer__socials-icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="footer__socials">
-          <li class="footer__socials-item"></li>
-          <li class="footer__socials-item"></li>
-          <li class="footer__socials-item"></li>
-        </ul>
-      </div>
-      <div class="footer_sections">
-        <h2>Разделы сайта</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item">О компании</li>
-          <li class="footer__list-item">Продукты</li>
-          <li class="footer__list-item">Производство печатных плат</li>
-          <li class="footer__list-item">Монтаж печатных плат</li>
-          <li class="footer__list-item">Комплектующие</li>
-          <li class="footer__list-item">Доставка</li>
-          <li class="footer__list-item">Контакты</li>
-        </ul>
-      </div>
-      <div class="footer__contacts">
-        <h2>Наш офис</h2>
-        <ul class="footer__list">
-          <li></li>
-          <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
-          <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
-          <li><a href="tel:+79269260807">+7 (926) 926-080-79</a></li>
-        </ul>
+        <div class="footer__sections">
+          <div class="footer__title">
+            <h2>Разделы сайта</h2>
+            <button class="footer__button footer__button--active"></button>
+          </div>
+          <ul class="footer__list footer__list-column">
+            <li class="footer__list-item"><a href="#">О компании</a></li>
+            <li class="footer__list-item"><a href="#">Продукты</a></li>
+            <li class="footer__list-item"><a href="#">Производство печатных плат</a></li>
+            <li class="footer__list-item"><a href="#">Монтаж печатных плат</a></li>
+            <li class="footer__list-item"><a href="#">Комплектующие</a></li>
+            <li class="footer__list-item"><a href="#">Доставка</a></li>
+            <li class="footer__list-item"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__title">
+            <h2>Наш офис</h2>
+            <button class="footer__button footer__button--active"></button>
+          </div>
+          <ul class="footer__list footer__list-column footer__list footer__list-column--active">
+            <li>г. Мытищи, Олимпийский проспект, д.10</li>
+            <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+            <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+            <li><a href="tel:+79269260807">+7 (926) 926-080-79</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer__bottom">
-        <ul class="footer__list">
+        <ul class="footer__list footer__list-bottom">
           <li>Все права защищены</li>
-          <li>1999-2018 SD Service Devices</li>
-          <li>Условия конфиденциальности</li>
+          <li class="footer__list-service">1999-2018 SD Service Devices</li>
+          <li><a href="#">Условия конфиденциальности</a></li>
           <li>Developed by wow studio </li>
         </ul>
       </div>
     </div>
   </footer>
-
+  <div class="callform">
+    <button class="callfrom__close"></button>
+    <form action="" method="POST">
+      <h2>Закажите звонок</h2>
+      <h3>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</h3>
+      <label for="name">Ваше Имя</label>
+      <input type="text" id="name" name="name" placeholder="Имя">
+      <label for="phone">Ваш телефон</label>
+      <input type="tel" name="phone" id="phone" placeholder="Телефон">
+      <textarea name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+      <button type="submit">Задать вопрос</button>
+      <div class="form-wrapper">
+        <input type="checkbox" name="confirm" id="confirm" checked>
+        <label for="confirm">Я согласен на обработку персональных данных</label>
+      </div>
+  </div>
+  </form>
+  </div>
+  <script src="js/vendor.js"></script>
 </body>
 
 </html>

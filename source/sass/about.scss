@@ -1,5 +1,6 @@
 .about {
-  margin-top: 80px;
+  margin-top: 77px;
+  margin-bottom: 91px;
 }
 
 .about p {
@@ -8,12 +9,13 @@
   font-size: 16px;
   line-height: 22px;
   color: #666666;
+  margin-bottom: 20px;
 }
 
-.container--padding {
-  padding-left: 180px;
-  padding-right: 33px;
-  background: url("../img/2005-desktop@1x.png") -15px no-repeat;
+.container-padding {
+  min-height: 327px;
+  padding-left: 210px;
+  background: url("../img/2005-desktop@1x.png") 0  5px no-repeat;
 }
 
 .about__title {
@@ -23,7 +25,7 @@
   line-height: 51px;
   color: #666666;
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .about__button {
@@ -37,7 +39,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $main-color;
-  width: 155px;
+  width: 180px;
   padding: 13.5px 0;
   border: 1px solid $main-color;
   border-radius: 5px;
@@ -51,11 +53,13 @@
 @media (max-width: $tablet-width) {
   .about {
     margin-top: 29px;
+    margin-bottom: 125px;
   }
 
-  .container--padding {
+  .container-padding {
     padding-left: 210px;
     background: url("../img/2005-tablet@1x.png") left 0 no-repeat;
+    min-height: 360px;
   }
 
   .about__title {
@@ -75,18 +79,28 @@
   .about__hide {
     display: none;
   }
+
+  .about h2 {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  .about p {
+    margin-bottom: 21px;
+    margin-top: 22px;
+  }
 }
 
 @media (max-width: $mobile-width) {
   .about {
-    margin-top: 30px;
+    margin-top: 44px;
   }
 
   .about p {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
-  .container--padding {
+  .container-padding {
     background: none;
     padding-left: 15px;
     padding-right: 15px;
@@ -95,5 +109,9 @@
   .about__title {
     font-size: 28px;
     line-height: 39px;
+  }
+
+  .about__button {
+    margin-top: -12px;
   }
 }
