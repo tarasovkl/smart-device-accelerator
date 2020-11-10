@@ -192,9 +192,7 @@ h1 {
 @media (max-width: $tablet-width) {
   .header {
     min-height: 686px;
-    background: url("../img/circuit-tablet@1x.png") calc(50% + 357px) 114px no-repeat,
-      url("../img/triangles-top-tablet.svg") calc(63%) 0 no-repeat, url("../img/bg-tablet@1x.png") center no-repeat,
-      #1b2d37;
+    background: url("../img/circuit-tablet@1x.png") calc(50% + 357px) 114px no-repeat, url("../img/triangles-top-tablet.svg") calc(63%) 0 no-repeat, url("../img/bg-tablet@1x.png") center no-repeat, #1b2d37;
     background-size: 465px, auto, cover;
   }
 
@@ -293,9 +291,7 @@ h1 {
 @media (max-width: $mobile-width) {
   .header {
     min-height: 647px;
-    background: url("../img/circuit-mobile@1x.png") 23px 90px no-repeat,
-      url("../img/triangles-top-tablet.svg") calc(36%) -12px no-repeat, url("../img/bg-mobile@1x.png") center no-repeat,
-      #1b2d37;
+    background: url("../img/circuit-mobile@1x.png") 23px 90px no-repeat, url("../img/triangles-top-tablet.svg") calc(36%) -12px no-repeat, url("../img/bg-mobile@1x.png") center no-repeat, #1b2d37;
     background-size: 301px, auto, cover;
   }
 
