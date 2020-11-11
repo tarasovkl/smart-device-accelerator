@@ -16,6 +16,13 @@
   min-height: 327px;
   padding-left: 210px;
   background: url("../img/2005-desktop@1x.png") 0  5px no-repeat;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    min-height: 327px;
+    padding-left: 210px;
+    background: url("../img/2005-desktop@2x.png") 0  5px no-repeat;
+    background-size: 220px 317px;
+  }
 }
 
 .about__title {
@@ -60,6 +67,13 @@
     padding-left: 210px;
     background: url("../img/2005-tablet@1x.png") left 0 no-repeat;
     min-height: 360px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      padding-left: 210px;
+      background: url("../img/2005-tablet@2x.png") left 0 no-repeat;
+      background-size: 244px 362px;
+      min-height: 360px;
+    }
   }
 
   .about__title {

@@ -6,6 +6,12 @@ h1 {
   min-height: 878px;
   background: url("../img/circuit-desktop@1x.png") calc(50% + 440px) 258px no-repeat, url("../img/triangles-top.svg") calc(50% + 9px) no-repeat, url("../img/bg-desktop@1x.png") center no-repeat, #1b2d37;
   overflow: hidden;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    min-height: 878px;
+    background: url("../img/circuit-desktop@2x.png") calc(50% + 440px) 258px no-repeat, url("../img/triangles-top.svg") calc(50% + 9px) no-repeat, url("../img/bg-desktop@2x.png") center no-repeat, #1b2d37;
+    background-size: 705px 515px, auto, cover;
+  }
 }
 
 .header__scroll {
@@ -19,7 +25,11 @@ h1 {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  opacity: 0.5;
+  opacity: 0.6;
+
+  @media (max-width: 1776px) {
+    margin-top: 30px;
+  }
 }
 
 .header__container {
@@ -194,6 +204,12 @@ h1 {
     min-height: 686px;
     background: url("../img/circuit-tablet@1x.png") calc(50% + 357px) 114px no-repeat, url("../img/triangles-top-tablet.svg") calc(63%) 0 no-repeat, url("../img/bg-tablet@1x.png") center no-repeat, #1b2d37;
     background-size: 465px, auto, cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      min-height: 686px;
+      background: url("../img/circuit-tablet@2x.png") calc(50% + 357px) 114px no-repeat, url("../img/triangles-top-tablet.svg") calc(63%) 0 no-repeat, url("../img/bg-tablet@2x.png") center no-repeat, #1b2d37;
+      background-size: 465px 340px, auto, cover;
+    }
   }
 
   .header__scroll {
@@ -291,8 +307,14 @@ h1 {
 @media (max-width: $mobile-width) {
   .header {
     min-height: 647px;
-    background: url("../img/circuit-mobile@1x.png") 23px 90px no-repeat, url("../img/triangles-top-tablet.svg") calc(36%) -12px no-repeat, url("../img/bg-mobile@1x.png") center no-repeat, #1b2d37;
+    background: url("../img/circuit-mobile@1x.png") center 90px no-repeat, url("../img/triangles-top-tablet.svg") calc(36%) -12px no-repeat, url("../img/bg-mobile@1x.png") center no-repeat, #1b2d37;
     background-size: 301px, auto, cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      min-height: 647px;
+      background: url("../img/circuit-mobile@2x.png") center 90px no-repeat, url("../img/triangles-top-tablet.svg") calc(36%) -12px no-repeat, url("../img/bg-mobile@2x.png") center no-repeat, #1b2d37;
+      background-size: 301px 220px, auto, cover;
+    }
   }
 
   .header__container {

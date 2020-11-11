@@ -4,6 +4,14 @@
   background-color: $main-color;
   z-index: 1;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    min-height: 670px;
+    background: url("../img/airplane@2x.png") 25% 160px no-repeat, url("../img/triangles-top1.svg") 14% calc(50% - 75px) no-repeat;
+    background-size: 511px 288px;
+    background-color: $main-color;
+    z-index: 1;
+  }
+
   @media (max-width: 1500px) {
     background-size: 35%;
   }
