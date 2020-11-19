@@ -3,12 +3,13 @@
 (function () {
   var headerButton = document.querySelector(".header__button");
   var popupForm = document.querySelector(".callform");
-  var closePopup = document.querySelector(".callfrom__close");
+  var closePopup = document.querySelector(".callform__close");
   var popupLogin = popupForm.querySelector("[name=callform-login]");
   var popupPhone = popupForm.querySelector("[name=callform-tel]");
   var popupText = popupForm.querySelector("[name=callform-text]");
   var footerButtons = document.querySelectorAll(".footer__button");
   var footerLists = document.querySelectorAll(".footer__list-column");
+  var body = document.querySelector("body");
   var footerButtonsArray = Array.prototype.slice.call(footerButtons);
   var footerListsArray = Array.prototype.slice.call(footerLists);
   var isStorageSupport = true;
@@ -29,11 +30,7 @@
   };
 
   var toggleClass = function (element, selector) {
-    if (element.classList.contains(selector)) {
-      element.classList.remove(selector);
-    } else {
-      element.classList.add(selector);
-    }
+    element.classList.toggle(selector);
   };
 
   if (headerButton) {
@@ -45,17 +42,20 @@
         popupText.value = localStorage.getItem("text");
       }
       popupLogin.focus();
+      addClass(body, "body__overflow");
     })
   }
 
   if (closePopup) {
     closePopup.addEventListener("click", function () {
       removeClass(popupForm, "callform__active");
+      removeClass(body, "body__overflow");
     })
 
     document.addEventListener("keydown", function (evt) {
       if (evt.key === "Escape") {
         removeClass(popupForm, "callform__active");
+        removeClass(body, "body__overflow");
       }
     });
   }

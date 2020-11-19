@@ -2,6 +2,10 @@ h1 {
   display: none;
 }
 
+.body__overflow {
+  overflow-y: hidden;
+}
+
 .header {
   min-height: 878px;
   background: url("../img/circuit-desktop@1x.png") calc(50% + 440px) 258px no-repeat, url("../img/triangles-top.svg") calc(50% + 9px) no-repeat, url("../img/bg-desktop@1x.png") center no-repeat, #1b2d37;
@@ -47,28 +51,8 @@ h1 {
 }
 
 .header__logo {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.header__logo-text {
-  font-family: $font-head;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 29px;
-  color: #ffffff;
-  margin-left: 16px;
-  margin-top: 6px;
-}
-
-.header__logo-text p {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #788891;
-  margin: 0;
+  width: 202px;
+  height: 52px;
 }
 
 .header__contacts {
@@ -325,13 +309,9 @@ h1 {
     min-height: 71px;
   }
 
-  .header__logo img {
+  .header__logo {
     width: 38px;
     height: 38px;
-  }
-
-  .header__logo-text {
-    display: none;
   }
 
   .header__email {

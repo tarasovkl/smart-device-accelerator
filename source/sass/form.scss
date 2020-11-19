@@ -45,7 +45,9 @@ form {
 }
 
 form label {
-  display: none;
+  position: absolute;
+  top: -6000px;
+  left: -6000px;
 }
 
 form input[type="checkbox"] + label {
@@ -90,7 +92,7 @@ form h2 {
   margin-bottom: 11px;
 }
 
-form h3 {
+form p {
   font-family: $font-text;
   font-size: 16px;
   line-height: 22px;
@@ -220,7 +222,7 @@ form button {
     margin-bottom: 14px;
   }
 
-  form h3 {
+  form p {
     margin-bottom: 26px;
   }
 

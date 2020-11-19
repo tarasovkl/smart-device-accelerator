@@ -41,7 +41,7 @@
   line-height: 39px;
 }
 
-.callform h3 {
+.callform p {
   margin-bottom: 40px;
 }
 
@@ -67,7 +67,7 @@
   padding-top: 0;
 }
 
-.callfrom__close {
+.callform__close {
   position: absolute;
   width: 16.56px;
   height: 16.56px;
@@ -81,4 +81,9 @@
 
 .callform__active {
   display: block;
+}
+
+.form-wrapper--callform label {
+  top: 0;
+  left: 0;
 }
