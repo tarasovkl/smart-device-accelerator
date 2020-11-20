@@ -25,27 +25,27 @@
         <div class="header__logo">
           <a>
             <picture>
-              <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+              <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
               <img src="img/logo.svg" width="202" height="52" alt="Логотип">
             </picture>
           </a>
         </div>
         <div class="header__contacts">
           <div class="header__email">
-            <a href="mailto:info@sd.ru">
+            <a class="header__email-text" href="mailto:info@sd.ru">
               <svg class="header__icon-mail" width="19" height="14">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
               </svg>
+              <span>info@sd.ru</span>
             </a>
-            <a class="header__email-text" href="mailto:info@sd.ru">info@sd.ru</a>
           </div>
           <div class="header__phone">
-            <a href="tel:+74950005252">
+            <a class="header__phone-text" href="tel:+74950005252">
               <svg class="header__icon-phone" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
+              <span>+7 (495) 000 52 52</span>
             </a>
-            <a class="header__phone-text" href="tel:+74950005252">+7 (495) 000 52 52</a>
           </div>
           <button class="header__button">Заказать звонок</button>
         </div>
@@ -286,7 +286,7 @@
     </div>
   </footer>
   <div class="callform">
-    <button class="callform__close"></button>
+    <button class="callform__close">Закрыть</button>
     <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>

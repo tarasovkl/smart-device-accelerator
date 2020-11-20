@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -26,8 +27,14 @@
 }
 
 .footer__logo {
+  padding-left: 4px;
+  display: flex;
+  flex-direction: column;
   width: 216px;
   height: 52px;
+  margin-right: 140px;
+  min-height: 140px;
+  margin-bottom: 20px;
 }
 
 .footer__socials {
@@ -35,13 +42,27 @@
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  margin: 0;
-  width: 50%;
+  margin: 50px 0 0 0;
+  width: 100px;
   align-items: center;
 }
 
+.footer__socials-item {
+  margin-right: 15px;
+}
+
+.footer__socials-icon {
+  fill: #cdcdcd;
+}
+
+.footer__socials-icon:hover {
+  fill: rgba(0, 0, 0, 0.9);
+}
+
 .footer__sections {
-  width: 40%;
+  min-width: 316px;
+  margin-right: 260px;
+  margin-bottom: 20px;
 }
 
 .footer__sections ul {
@@ -50,10 +71,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.footer__sections li {
-  width: 235px;
 }
 
 .footer__sections h2 {
@@ -74,8 +91,7 @@
   list-style: none;
   padding: 0;
   margin-top: 0;
-  color: #1b2d37;
-  opacity: 0.5;
+  color: rgba(27, 45, 55, 0.5);
   font-size: 15px;
   line-height: 25px;
 }
@@ -85,17 +101,23 @@
   font-size: 15px;
   line-height: 25px;
   color: #1b2d37;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .footer__list-column {
   justify-content: start;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 50%;
+  max-height: 120px;
 }
 
 .footer__list-item {
   display: block;
+  margin-right: 74px;
 }
 
 .footer__list-item a {
@@ -107,7 +129,7 @@
 }
 
 .footer__contacts {
-  width: 27%;
+  min-width: 316px;
 }
 
 .footer__contacts ul {
@@ -123,27 +145,53 @@
   text-transform: uppercase;
   color: #1b2d37;
   margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .footer__bottom {
+  position: relative;
   text-transform: uppercase;
-  margin-top: 0;
-  font-size: 13px;
-  line-height: 24px;
+  margin-top: -10px;
   flex-grow: 1;
   width: 100%;
 }
 
-.footer__list li {
-  margin-right: 25px;
+.footer__bottom ul {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 14px;
 }
 
 .footer__list-bottom {
+  margin-top: 64px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 250vh;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: -17px;
+    left: -250px;
+  }
+}
+
+.footer__list-bottom a {
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  margin-top: 70px;
-  padding-bottom: 29px;
+}
+
+.footer__list-bottom li:first-child {
+  padding-right: 22px;
+}
+
+.footer__list-bottom li:nth-child(4n + 2) {
+  padding-right: 90px;
+}
+
+.footer__list-bottom li:nth-child(3n + 3) {
+  flex-basis: 555px;
 }
 
 .footer__button {
@@ -166,13 +214,26 @@
   }
 
   .footer__logo {
-    margin-bottom: 54px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-bottom: -23px;
   }
 
   .footer__socials {
-    margin-top: -5px;
-    margin-left: 253px;
-    width: 110px;
+    margin-top: 0;
+    max-height: 55px;
+    width: 112px;
+    flex-wrap: wrap;
+  }
+
+  .footer__socials-item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .footer__list {
@@ -194,12 +255,14 @@
 
   .footer__list-bottom {
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 47px;
 
     &::before {
       position: absolute;
       content: "";
-      width: 100vh;
+      width: 150vh;
       height: 1px;
       background-color: rgba(0, 0, 0, 0.2);
       top: -22px;
@@ -222,6 +285,10 @@
     }
   }
 
+  .footer__list-bottom li:nth-child(3n + 3) {
+    flex-basis: 505px;
+  }
+
   .footer__list-service {
     position: absolute;
     top: -373px;
@@ -231,6 +298,7 @@
   .footer__sections {
     flex-direction: column;
     width: 50%;
+    margin-right: 0;
   }
 
   .footer__sections ul {
@@ -257,23 +325,55 @@
     }
   }
 
+  .footer__top {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer__list-bottom li:nth-child(3n + 3) {
+    flex-basis: 25px;
+  }
+
   .footer__container {
     padding: 0 15px;
   }
 
   .footer__logo {
+    position: relative;
     margin-top: 46px;
+    flex-direction: column;
+    align-items: center;
+    height: 164px;
+    margin-bottom: 80px;
+
+    &::after {
+      position: absolute;
+      content: "1999-2018 SD Service Devices";
+      font-family: "PT Mono", "Arial", sans-serif;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #1b2d37;
+      opacity: 0.5;
+      width: 233px;
+      top: 90px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .footer__socials {
-    margin-left: 0;
-    margin-top: 72px;
-    width: 113px;
+    margin: 0;
+    padding: 0;
+    width: 114px;
   }
 
   .footer__sections {
+    min-width: 290px;
     width: 100%;
-    margin-bottom: 56px;
+    margin-bottom: 44px;
     min-height: 0;
   }
 
@@ -320,7 +420,8 @@
   }
 
   .footer__contacts {
-    flex-basis: 100%;
+    min-width: 290px;
+    width: 100%;
     cursor: pointer;
   }
 
@@ -333,6 +434,17 @@
     justify-content: center;
     align-items: center;
     margin-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 57px;
+
+    &::before {
+      top: -29px;
+    }
+  }
+
+  .footer__list-bottom li {
+    margin-bottom: 20px;
   }
 
   .footer__list-service {
@@ -343,6 +455,10 @@
     width: 235px;
     margin: 0;
     transform: translate(-50%, -50%);
+  }
+
+  .footer__list-column {
+    margin-top: 7px;
   }
 
   .footer__contacts .footer__list--disable {

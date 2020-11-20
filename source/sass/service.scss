@@ -61,6 +61,10 @@
     z-index: 9;
     cursor: pointer;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .services__item-title {
@@ -85,7 +89,7 @@
 @media (max-width: $tablet-width) {
   .services {
     min-height: 1127px;
-    margin-top: -51px;
+    margin-top: -49px;
     padding-top: 50px;
   }
 
@@ -162,7 +166,7 @@
 
   .services__list {
     justify-content: space-between;
-    width: auto;
+    width: 290px;
     margin: 0 auto;
   }
 
@@ -174,6 +178,7 @@
     width: 290px;
     height: 256px;
     margin-bottom: 30px;
+    margin-right: 0;
 
     &::before {
       top: 193px;

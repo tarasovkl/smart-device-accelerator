@@ -31,63 +31,97 @@ h1 {
   color: #ffffff;
   opacity: 0.6;
 
+  &:hover {
+    opacity: 0.9;
+  }
+
   @media (max-width: 1776px) {
     margin-top: 30px;
   }
 }
 
 .header__container {
-  width: 75%;
+  width: 76.5%;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .header__top {
+  margin-top: 33px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  min-height: 118px;
+  height: 52px;
 }
 
 .header__logo {
   width: 202px;
   height: 52px;
+  margin-bottom: 15px;
+  padding-left: 15px;
 }
 
 .header__contacts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 47.5%;
+  margin-top: -15px;
+  width: 659px;
   font-family: $font-text;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  margin-left: 20px;
 }
 
 .header__email {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-basis: 135px;
+  padding-top: 14px;
+  width: 135px;
   margin-right: 55px;
 }
 
+.header__email span,
+.header__email svg {
+  margin-bottom: 10px;
+}
+
+.header__icon-mail,
+.header__icon-phone {
+  fill: $main-color;
+}
+
+.header__email-text:hover .header__icon-mail,
+.header__phone-text:hover .header__icon-phone {
+  fill: cyan;
+}
+
 .header__phone {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 35%;
+  padding-top: 14px;
+  width: 208px;
   margin-right: 15px;
 }
 
-.header__email a {
-  padding-left: 20px;
+.header__email-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .header__phone-text {
-  padding-left: 16px;
-  width: 196px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .header__contacts a {
@@ -109,11 +143,15 @@ h1 {
   height: 45px;
   width: 182px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .header__content {
-  margin-top: 197px;
-  margin-left: -3px;
+  margin-top: 230px;
+  margin-left: 10px;
 }
 
 .header__about {
@@ -147,7 +185,7 @@ h1 {
     width: 66px;
     height: 2px;
     background: #ffffff;
-    left: -98px;
+    left: -94px;
     top: 17px;
   }
 }
@@ -168,6 +206,10 @@ h1 {
   color: #ffffff;
   letter-spacing: 0.05em;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .header__content img {
@@ -196,6 +238,18 @@ h1 {
     }
   }
 
+  .header__logo {
+    padding-left: 0;
+  }
+
+  .header__email span {
+    display: none;
+  }
+
+  .header__phone span {
+    display: none;
+  }
+
   .header__scroll {
     display: none;
   }
@@ -210,14 +264,6 @@ h1 {
     height: 19px;
   }
 
-  .header__email-text {
-    display: none;
-  }
-
-  .header__phone-text {
-    display: none;
-  }
-
   .header__phone a {
     width: auto;
     padding: 0;
@@ -230,20 +276,24 @@ h1 {
 
   .header__top {
     min-height: 90px;
+    margin-top: 8px;
   }
 
   .header__contacts {
-    width: 100px;
+    width: 83px;
   }
 
   .header__email {
     width: 26px;
     flex-basis: 26px;
+    margin-right: 0;
+    padding-top: 10px;
   }
 
   .header__phone {
     width: 26px;
     margin: 0;
+    padding-top: 7px;
   }
 
   .header__button {
@@ -256,7 +306,8 @@ h1 {
   }
 
   .header__content {
-    margin-top: 98px;
+    margin-top: 90px;
+    margin-left: -2px;
   }
 
   .header__about h2 {
@@ -312,6 +363,16 @@ h1 {
   .header__logo {
     width: 38px;
     height: 38px;
+    padding-left: 2px;
+  }
+
+  .header__logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header__contacts {
+    width: 73px;
   }
 
   .header__email {
@@ -319,7 +380,7 @@ h1 {
   }
 
   .header__content {
-    margin-top: 215px;
+    margin-top: 207px;
     margin-left: 0;
   }
 

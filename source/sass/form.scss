@@ -29,7 +29,7 @@ form {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 48.7%;
+  width: 48.8%;
   color: #ffffff;
   margin-left: 621px;
   padding-top: 91px;
@@ -42,6 +42,11 @@ form {
   position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+.form-wrapper:last-child label {
+  left: 0;
+  top: 0;
 }
 
 form label {
@@ -83,6 +88,10 @@ form input[type="checkbox"]:checked + label {
   }
 }
 
+form input[type="checkbox"]:focus + label::before {
+  border: solid 1px cyan;
+}
+
 form h2 {
   font-family: $font-head;
   font-size: 36px;
@@ -113,6 +122,10 @@ form input {
   font-size: 16px;
   line-height: 22px;
   padding: 14px 16.4px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 
 form input::placeholder,
@@ -136,6 +149,10 @@ form textarea {
   height: 154px;
   padding: 13px 16.4px;
   color: #ffffff;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 
 form input[type="checkbox"] {
@@ -162,6 +179,11 @@ form button {
   background: $main-color;
   border: 1px solid #ffffff;
   border-radius: 5px;
+
+  &:hover {
+    border-color: royalblue;
+    color: royalblue;
+  }
 }
 
 @media (max-width: $tablet-width) {
