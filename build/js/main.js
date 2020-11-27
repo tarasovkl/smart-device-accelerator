@@ -8,7 +8,7 @@
   var popupPhone = popupForm.querySelector("[name=callform-tel]");
   var popupText = popupForm.querySelector("[name=callform-text]");
   var footerButtons = document.querySelectorAll(".footer__button");
-  var footerLists = document.querySelectorAll(".footer__list-column");
+  var footerLists = document.querySelectorAll(".footer__list-hide");
   var body = document.querySelector("body");
   var footerButtonsArray = Array.prototype.slice.call(footerButtons);
   var footerListsArray = Array.prototype.slice.call(footerLists);

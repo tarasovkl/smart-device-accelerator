@@ -15,7 +15,7 @@
 }
 
 .footer__container {
-  width: 73.8%;
+  width: 74.8%;
   margin: 0 auto;
   padding: 65px 0 0;
 }
@@ -27,12 +27,12 @@
 }
 
 .footer__logo {
-  padding-left: 4px;
+  padding-left: 12px;
   display: flex;
   flex-direction: column;
   width: 216px;
   height: 52px;
-  margin-right: 140px;
+  margin-right: 62px;
   min-height: 140px;
   margin-bottom: 20px;
 }
@@ -43,7 +43,7 @@
   list-style: none;
   padding: 0;
   margin: 50px 0 0 0;
-  width: 100px;
+  width: 127px;
   align-items: center;
 }
 
@@ -61,16 +61,21 @@
 
 .footer__sections {
   min-width: 316px;
-  margin-right: 260px;
   margin-bottom: 20px;
 }
 
+.footer__list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .footer__sections ul {
-  margin-top: 25px;
+  margin-top: 13px;
   margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .footer__sections h2 {
@@ -112,7 +117,7 @@
   justify-content: start;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 120px;
+  justify-content: flex-start;
 }
 
 .footer__list-item {
@@ -164,6 +169,8 @@
 
 .footer__list-bottom {
   margin-top: 64px;
+  padding-left: 10px;
+  letter-spacing: 0.04em;
 
   &::before {
     position: absolute;
@@ -183,11 +190,11 @@
 }
 
 .footer__list-bottom li:first-child {
-  padding-right: 22px;
+  padding-right: 15px;
 }
 
 .footer__list-bottom li:nth-child(4n + 2) {
-  padding-right: 90px;
+  padding-right: 75px;
 }
 
 .footer__list-bottom li:nth-child(3n + 3) {
@@ -208,17 +215,44 @@
     }
   }
 
+  .footer__sections ul {
+    margin-top: 13px;
+  }
+
+  .footer__list-column:last-child{
+    margin-top: 0;
+  }
+
   .footer__container {
     padding: 19px 25px 0;
     width: 100%;
   }
 
   .footer__logo {
+    position: relative;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
     margin-right: 0;
     margin-bottom: -23px;
+    padding-left: 0;
+
+    &::after {
+      position: absolute;
+      content: "1999-2018 SD Service Devices";
+      font-family: "PT Mono", "Arial", sans-serif;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #1b2d37;
+      opacity: 0.5;
+      width: 233px;
+      top: 27px;
+      left: 58%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .footer__socials {
@@ -257,7 +291,8 @@
     position: relative;
     margin-bottom: 0;
     padding-bottom: 0;
-    margin-top: 47px;
+    margin-top: 52px;
+    padding-left: 0;
 
     &::before {
       position: absolute;
@@ -290,9 +325,7 @@
   }
 
   .footer__list-service {
-    position: absolute;
-    top: -373px;
-    left: calc(100% - 418px);
+    display: none;
   }
 
   .footer__sections {
@@ -301,14 +334,13 @@
     margin-right: 0;
   }
 
-  .footer__sections ul {
-    min-height: 180px;
-    max-height: 300px;
+  .footer__list-wrapper {
+    flex-direction: column;
   }
 
   .footer__list-column {
     max-height: 100%;
-    margin-top: 25px;
+    margin-top: 9px;
   }
 
   .footer__contacts {
@@ -347,20 +379,8 @@
     margin-bottom: 80px;
 
     &::after {
-      position: absolute;
-      content: "1999-2018 SD Service Devices";
-      font-family: "PT Mono", "Arial", sans-serif;
-      font-weight: normal;
-      font-size: 13px;
-      line-height: 24px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #1b2d37;
-      opacity: 0.5;
-      width: 233px;
       top: 90px;
       left: 50%;
-      transform: translate(-50%, -50%);
     }
   }
 
@@ -459,6 +479,10 @@
 
   .footer__list-column {
     margin-top: 7px;
+
+    &:last-child {
+      margin-top: 6px;
+    }
   }
 
   .footer__contacts .footer__list--disable {
