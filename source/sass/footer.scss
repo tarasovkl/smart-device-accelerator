@@ -114,7 +114,6 @@
 }
 
 .footer__list-column {
-  justify-content: start;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -219,7 +218,7 @@
     margin-top: 13px;
   }
 
-  .footer__list-column:last-child{
+  .footer__list-column:last-child {
     margin-top: 0;
   }
 
@@ -485,11 +484,11 @@
     }
   }
 
-  .footer__contacts .footer__list--disable {
+  .footer__contacts .footer__list-disable {
     display: none;
   }
 
-  .footer__sections .footer__list--disable {
+  .footer__sections .footer__list-disable {
     display: none;
   }
 }
