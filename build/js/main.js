@@ -74,7 +74,7 @@
     footerButtonsArray.forEach(function (button, i) {
       button.addEventListener("click", function () {
         toggleClass(button, "footer__button--active");
-        toggleClass(footerListsArray[i], "footer__list--disable");
+        toggleClass(footerListsArray[i], "footer__list-disable");
       });
     });
   }
