@@ -7,6 +7,7 @@
   var popupLogin = popupForm.querySelector("[name=callform-login]");
   var popupPhone = popupForm.querySelector("[name=callform-tel]");
   var popupText = popupForm.querySelector("[name=callform-text]");
+  var pageMask= document.querySelector(".mask");
   var footerButtons = document.querySelectorAll(".footer__button");
   var footerLists = document.querySelectorAll(".footer__list-hide");
   var body = document.querySelector("body");
@@ -43,6 +44,7 @@
       }
       popupLogin.focus();
       addClass(body, "body__overflow");
+      addClass(pageMask, "mask-active");
     })
   }
 
@@ -50,12 +52,14 @@
     closePopup.addEventListener("click", function () {
       removeClass(popupForm, "callform__active");
       removeClass(body, "body__overflow");
+      removeClass(pageMask, "mask-active");
     })
 
     document.addEventListener("keydown", function (evt) {
       if (evt.key === "Escape") {
         removeClass(popupForm, "callform__active");
         removeClass(body, "body__overflow");
+        removeClass(pageMask, "mask-active");
       }
     });
   }

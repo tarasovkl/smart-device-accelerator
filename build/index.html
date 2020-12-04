@@ -80,7 +80,7 @@
         </div>
         <div class="header__contacts">
           <div class="header__email">
-            <a class="header__email-text" href="mailto:info@sd.ru">
+            <a class="header__email-text" href="mailto:info@sd.ru" aria-label="написать на почту">
               <svg class="header__icon-mail" width="19" height="14">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
               </svg>
@@ -88,7 +88,7 @@
             </a>
           </div>
           <div class="header__phone">
-            <a class="header__phone-text" href="tel:+74950005252">
+            <a class="header__phone-text" href="tel:+74950005252" aria-label="набрать номер">
               <svg class="header__icon-phone" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
@@ -250,21 +250,21 @@
           </a>
           <ul class="footer__socials">
             <li class="footer__socials-item">
-              <a href="#">
+              <a href="#" aria-label="фэйсбук">
                 <svg class="footer__socials-icon" width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
-              <a href="#">
+              <a href="#" aria-label="одноклассники">
                 <svg class="footer__socials-icon" width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-klass"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
-              <a href="#">
+              <a href="#" aria-label="вконтакте">
                 <svg class="footer__socials-icon" width="27" height="27">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
@@ -275,7 +275,7 @@
         <div class="footer__sections">
           <div class="footer__title">
             <h2>Разделы сайта</h2>
-            <button class="footer__button"></button>
+            <button class="footer__button">Показать или скрыть блок</button>
           </div>
           <div class="footer__list-wrapper footer__list-hide footer__list-disable">
             <ul class="footer__list footer__list-column">
@@ -294,7 +294,7 @@
         <div class="footer__contacts">
           <div class="footer__title">
             <h2>Наш офис</h2>
-            <button class="footer__button footer__button--active"></button>
+            <button class="footer__button footer__button--active">Показать или скрыть блок</button>
           </div>
           <ul class="footer__list footer__list-column footer__list-hide">
             <li>г. Мытищи, Олимпийский проспект, д.10</li>
@@ -314,6 +314,7 @@
       </div>
     </div>
   </footer>
+  <div class="mask"></div>
   <div class="callform">
     <button class="callform__close">Закрыть</button>
     <form action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">

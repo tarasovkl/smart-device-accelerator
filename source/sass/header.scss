@@ -6,6 +6,20 @@ h1 {
   overflow-y: hidden;
 }
 
+.mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.mask-active {
+  display: block;
+}
+
 .header {
   min-height: 878px;
   background: url("../img/circuit-desktop@1x.png") calc(50% + 440px) 258px no-repeat, url("../img/triangles-top.svg") calc(50% + 9px) no-repeat, url("../img/bg-desktop@1x.png") center no-repeat, #1b2d37;
