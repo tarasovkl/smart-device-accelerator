@@ -1,6 +1,7 @@
 "use strict";
 
 (function () {
+  var FOOTER_BUTTON_NUMBER = 0;
   var headerButton = document.querySelector(".header__button");
   var popupForm = document.querySelector(".callform");
   var closePopup = document.querySelector(".callform__close");
@@ -33,6 +34,11 @@
   var toggleClass = function (element, selector) {
     element.classList.toggle(selector);
   };
+
+  if (footerListsArray) {
+    addClass(footerListsArray[FOOTER_BUTTON_NUMBER], "footer__list-disable");
+    removeClass(footerButtonsArray[FOOTER_BUTTON_NUMBER], "footer__button--active");
+  }
 
   if (headerButton) {
     headerButton.addEventListener("click", function () {
@@ -79,11 +85,14 @@
       button.addEventListener("click", function () {
         toggleClass(button, "footer__button--active");
         toggleClass(footerListsArray[i], "footer__list-disable");
+        toggleClass(footerListsArray[i + 1], "footer__list-disable");
+        toggleClass(footerListsArray[i - 1], "footer__list-disable");
       });
     });
   }
 
   jQuery(function($){
     $("#callform-phone").mask("+7(999)999-99-99");
+    $("#ask-phone").mask("+7(999)999-99-99");
  });
 })();

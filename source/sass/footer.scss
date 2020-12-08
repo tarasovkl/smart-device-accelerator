@@ -15,9 +15,9 @@
 }
 
 .footer__container {
-  width: 74.8%;
+  max-width: 1456px;
   margin: 0 auto;
-  padding: 65px 0 0;
+  padding: 65px 15px 0;
 }
 
 .footer__top {
@@ -32,7 +32,7 @@
   flex-direction: column;
   width: 216px;
   height: 52px;
-  margin-right: 62px;
+  margin-right: 24px;
   min-height: 140px;
   margin-bottom: 20px;
 }
@@ -332,6 +332,7 @@
     flex-direction: column;
     width: 50%;
     margin-right: 0;
+    margin-left: 0;
   }
 
   .footer__list-wrapper {
@@ -412,7 +413,7 @@
     &::before {
       position: absolute;
       content: "";
-      width: 100vh;
+      width: 115vh;
       height: 1px;
       background-color: #626962;
       top: -30px;
